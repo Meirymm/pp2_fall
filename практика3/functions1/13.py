@@ -1,5 +1,18 @@
 import random
-def guess_the_number():
-    return random.randrange(1,20)
+def Guess():
+    print("Hello! What is your name?")
+    b = input()
+    d = random.randint(1, 20)
+    print(f"Well, {b}, I am thinking of a number between 1 and 20. \nTakea guess.")
+    c = int(input())
+    i = 1
+    while c != d:
+        if c < d:
+            print("Your guess is too low, \nTake a guess.")
+        else:
+            print("Your guess is too high. \nTake a guess.")
+        i+=1
+        c = int(input())
+    print(f"Good job, {b} You guessed my number in {i} guesses!")
 
-
+Guess()
