@@ -75,3 +75,19 @@ movies = [
 "category": "Romance"
 }
 ]
+def movies_by_category(category):
+    total=0
+    count=0
+    for movie in movies:
+     if movie['category'] == category:
+         total=total+movie['imdb']
+         count=count+1
+    if count == 0:
+     return 0     
+    average=total/count
+    return average
+
+
+category = "Thriller"
+average = movies_by_category(category)
+print(average)

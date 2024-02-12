@@ -76,9 +76,18 @@ movies = [
 }
 ]
 def average_imdb_score(movies):
- total_imdb_score = sum(movie['imdb'] for movie in movies)
- return total_imdb_score / len(movies)
+ all=0
+ count=0
+ for movie in movies:
+     all=all+movie["imdb"]
+     count=count+1
+ if count==0:
+     return 0
+ average=all/count
+ return average
+    
+ 
 
 
-average_score = average_imdb_score(movies)
-print(average_score)
+average = average_imdb_score(movies)
+print(average)

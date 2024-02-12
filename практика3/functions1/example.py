@@ -1,4 +1,3 @@
-#You are given list of numbers separated by spaces. Write a function filter_prime which will take list of numbers as an agrument and returns only prime numbers from the list.
 def is_prime(numbers):
     prime_numbers = []
     for num in numbers:
@@ -15,4 +14,9 @@ prime_numbers = is_prime(numbers)
 print("Prime numbers:")
 print(prime_numbers)
 
+def volume_sphere(r):
+	return 4/3*3.14*r**3
 
+radius = int(input())
+volume = volume_sphere(radius)
+print(volume)

@@ -77,9 +77,13 @@ movies = [
 ]
 
 def movies_by_category(movies, category):
- return [movie for movie in movies if movie['category'] == category]
+    movies_in_category=[]
+    for movie in movies:
+        if movie["category"]==category:
+            movies_in_category.append(movie)
+    return movies_in_category        
+ 
 
-
-category = "Romance"
+category = "Thriller"
 romance_movies = movies_by_category(movies, category)
 print(romance_movies)
