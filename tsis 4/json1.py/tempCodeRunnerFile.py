@@ -1,15 +1,12 @@
 import json
-import os
-
-json_file = os.path.join(os.getcwd(), "sample-data.json")
-
-with open(r"D:\For myself\Edu\python codes\tsis 4\json1\sample-data.json") as file:
-    data = json.load(file)
+with open("tsis 4/json1.py/sample-data.json","r") as file:
+    json_string=file.read()
+    data = json.loads(json_string)
 
 print("Interface Status" )
 print("="*85)
 print("DN                                                 Description           Speed    MTU")
 print("-"*50 + " " + "-"*21 + " " + "-"*5 + " " + "-"*6) 
-for i in data['imdata']:
-    print("{}                             {}  {}".format(i['l1PhysIf']['attributes']['dn'],i['l1PhysIf']['attributes']['fecMode'],i['l1PhysIf']['attributes']['mtu'])) 
-        
+
+for x in data['imdata']:
+    print("{}                             {}  {}".format(x['l1PhysIf']['attributes']['dn'],x['l1PhysIf']['attributes']['fecMode'],x['l1PhysIf']['attributes']['mtu'])) 

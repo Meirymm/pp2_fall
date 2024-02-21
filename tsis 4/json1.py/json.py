@@ -1,7 +1,7 @@
 import json
 with open("tsis 4/json1.py/sample-data.json","r") as file:
     json_string=file.read()
-    data = json.loads(json_string)
+    data = json.load(json_string)
 
 print("Interface Status" )
 print("="*85)
